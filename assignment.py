@@ -39,12 +39,12 @@ def String_occurrence(word):
     word = word.lower()     #lowercase conversion to consider case-insensivity
     char_count = {}         #dictionary to store character count
     for char in word:
-        char_count[char] = char_count.get(char, 0) + 1            #counting the occurrence of the character
-    max = 0
-    max_char = []       #list to store characters if there are 2 or more have same maximum frequency
+        char_count[char] = char_count.get(char,0)+1            #counting the occurrence of the character
+    max=0
+    max_char=[]       #list to store characters if there are 2 or more have same maximum frequency
 
     for j, k in char_count.items():
-        if k > max:
+        if k>max:
             max = k     #if the current character is higher than the previous maximum,then maximum is updates to the current character frequency
             max_char = [j]      #character update
         elif k == max:
